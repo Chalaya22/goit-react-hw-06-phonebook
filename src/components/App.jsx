@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 
-const contactsData = [
+const contacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
   { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
   { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
@@ -14,7 +14,7 @@ const contactsData = [
 export const App = () => {
   const [contacts, setContacts] = useState(() => {
     const contactsInString = localStorage.getItem('contacts');
-    const contactsIsParsed = JSON.parse(contactsInString) ?? contactsData;
+    const contactsIsParsed = JSON.parse(contactsInString) ?? contacts;
     return contactsIsParsed;
   });
   const [filter, setFilter] = useState(' ');
@@ -46,18 +46,13 @@ export const App = () => {
   //filter
   const onFilter = event => {
     setFilter(event.target.value);
-    // this.setState({
-    //   filter: event.target.value,
-    // });
   };
   const onFilterContacts = () => {
-    // const { contacts, filter } = this.state;
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.trim().toLowerCase())
     );
   };
 
-  // const { filter } = this.state;
   const filteredContacts = onFilterContacts();
 
   return (
