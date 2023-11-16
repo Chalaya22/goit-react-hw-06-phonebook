@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { nanoid } from 'nanoid';
+import { useDispatch } from 'react-redux';
+import { addContact } from 'redux/contactSlice';
 import css from './ContactForm.module.css';
 
-const ContactForm = ({ handleAddContact }) => {
+const ContactForm = () => {
+  const dispatch = useDispatch();
+
   const [name, setName] = useState(' ');
   const [number, setNumber] = useState(' ');
 
@@ -25,9 +30,15 @@ const ContactForm = ({ handleAddContact }) => {
     setNumber(' ');
   };
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    handleAddContact({ name, number });
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const newObject = {
+      id: nanoid(),
+      name,
+      number,
+    };
+    dispatch(addContact(newObject));
     reset();
   };
 
