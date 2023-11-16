@@ -52,8 +52,8 @@ const ContactForm = () => {
           name="name"
           value={name}
           onChange={handleInputChange}
-          placeholder="username: "
           pattern="^[a-zA-Zа-яА-Я]+(([' \\-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          placeholder="username: "
           required
         />
       </label>
