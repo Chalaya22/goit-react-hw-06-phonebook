@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { nanoid } from 'nanoid';
 
 const initialState = {
   contacts: [
@@ -10,17 +9,6 @@ const initialState = {
   ],
 };
 
-//  const handleAddContact = contactList => {
-//     if (contacts.some(contact => contact.name === contactList.name)) {
-//       alert(`'${contactList.name}' is already in contact`);
-//       return;
-//     }
-
-//     const newContact = {
-//       ...contactList,
-//       id: nanoid(),
-//     };
-//     setContacts([...contacts, newContact]);
 export const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
