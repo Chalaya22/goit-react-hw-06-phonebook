@@ -24,7 +24,7 @@ code {
 .titlePhone {
   font-weight: 700;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   text-align: center;
 
   color: black;
@@ -32,7 +32,7 @@ code {
 .titleContact {
   font-weight: 700;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   text-align: center;
 
   color: black;
