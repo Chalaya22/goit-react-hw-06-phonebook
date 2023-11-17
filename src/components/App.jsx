@@ -7,8 +7,8 @@ export const App = () => {
   const contacts = useSelector(state => state.contacts.contacts);
 
   return (
-    <section>
-      <h1 className="titlePhone">Phonebook</h1>
+    <section className="styledSection">
+      <h1 className="titlePhone">Phonebook ❤️</h1>
       <ContactForm />
 
       <h2 className="titleContact">Contacts</h2>

@@ -13,7 +13,7 @@ const Filter = () => {
   return (
     <div className={css.filter}>
       <label htmlFor="filter">
-        <p className={css.filterTitle}>Find contact by name</p>
+        <p className={css.filterTitle}>Find contact by name 🔸🔸🔸🔸🔸🔸🔸</p>
         <input
           className={css.filterImput}
           type="text"
